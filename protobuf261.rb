@@ -9,7 +9,7 @@ class Protobuf261 < Formula
   # https://github.com/google/protobuf/issues/549
   patch :p1, :DATA
 
-  conflicts_with "protobuf", :because => "Differing versions of same formula"
+  keg_only "Do not install to /usr/local, to avoid version conflict."
 
   # this will double the build time approximately if enabled
   option "with-check", "Run build-time check"
